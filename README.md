@@ -1,5 +1,5 @@
 # karambolock
-# 💫 About Me:
+# 💫 Kurulum:
 Hack<br>Cyber security<br>Softwate
 
 
