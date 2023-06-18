@@ -1,6 +1,9 @@
 # karambolock
-# 💫 Kurulum:
-Hack<br>Cyber security<br>Softwate
+# 💫 İnstall:
+1:`git clone https://github.com/Karambolp/karambolock`
+2:`cd karambolock`
+3:`pip install -r requirements.txt`
+4:`python3 karambolock.py`
 
 
 # 💻 Tech Stack:
