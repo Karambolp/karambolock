@@ -17,7 +17,7 @@ if not komut_var_mi("figlet"):
     try:
         os.system("sudo apt install figlet")
     except:
-        print("Komut çalıştırılırken bir hata oluştu.")
+        print("An error occurred while executing the command.")
 
 os.system("clear")
 os.system("figlet Karambolock")
@@ -39,19 +39,19 @@ def coz(sifreli_mesaj):
     return mesaj
 
 
-secenek = input("Şifrele (s) veya Çöz (ç) seçin: ")
+secenek = input("Select Encrypt (e) or Decrypt (d): ")
 
-if secenek == "s":
-    mesaj = input("Şifrelemek istediğiniz mesajı girin: ")
+if secenek == "e":
+    mesaj = input("Enter the message you want to encrypt: ")
     sifreli_mesaj = sifrele(mesaj)
-    with open("sifreli_mesaj.txt", "w") as dosya:
+    with open("encrypted-message.txt", "w") as dosya:
         dosya.write(sifreli_mesaj)
-        print("Mesaj şifrelenerek 'sifreli_mesaj.txt' dosyasına kaydedildi.")
-elif secenek == "ç":
-    sifreli_mesaj = input("Çözmek istediğiniz şifreli mesajı girin: ")
+        print("The message was encrypted and saved in the file 'encrypted-message.txt' ")
+elif secenek == "d":
+    sifreli_mesaj = input("Enter the encrypted message you want to decrypt: ")
     mesaj = coz(sifreli_mesaj)
-    with open("cozulmus_mesaj.txt", "w") as dosya:
+    with open("decrypted.txt", "w") as dosya:
         dosya.write(mesaj)
-        print("Şifre çözülerek 'cozulmus_mesaj.txt' dosyasına kaydedildi.")
+        print("The password was decrypted and saved in the file 'decrypted.txt'")
 else:
-    print("Geçersiz seçenek!")
+    print("Invalid option!")
