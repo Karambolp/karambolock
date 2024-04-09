@@ -3,16 +3,11 @@ import hashlib
 import os
 os.system("clear")
 def komut_var_mi(komut):
-    # Komutun çıktısını almak için "which" komutunu kullan
     cikti = os.popen(f"which {komut}").read()
-
-    # Çıktıda boşluk veya satır sonu karakteri yoksa, komut mevcuttur
     if cikti.strip() == "":
         return False
     else:
         return True
-
-# figlet paketini kontrol et
 if not komut_var_mi("figlet"):
     try:
         os.system("sudo apt install figlet")
@@ -24,7 +19,7 @@ os.system("figlet Karambolock")
 print("")
 def sifrele(mesaj):
     sifreli_mesaj = ""
-    shift = 3  # Shift value for the Caesar cipher
+    shift = 3  
     for harf in mesaj:
         sifreli_harf = chr((ord(harf) - 32 + shift) % 95 + 32)
         sifreli_mesaj += sifreli_harf
@@ -32,7 +27,7 @@ def sifrele(mesaj):
 
 def coz(sifreli_mesaj):
     mesaj = ""
-    shift = 3  # Shift value for the Caesar cipher
+    shift = 3  
     for harf in sifreli_mesaj:
         orijinal_harf = chr((ord(harf) - 32 - shift) % 95 + 32)  
         mesaj += orijinal_harf
